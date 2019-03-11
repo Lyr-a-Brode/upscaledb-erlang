@@ -37,7 +37,7 @@ endif
 CFLAGS += -fPIC -I $(ERTS_INCLUDE_DIR) -I $(ERL_INTERFACE_INCLUDE_DIR) 
 CXXFLAGS += -fPIC -I $(ERTS_INCLUDE_DIR) -I $(ERL_INTERFACE_INCLUDE_DIR) -I$(C_SRC_DIR) -I$(C_SRC_DIR)/include
 
-LDLIBS += -L $(ERL_INTERFACE_LIB_DIR) -lerl_interface -lei c_src/libupscaledb.a -lz -lsnappy -lboost_thread -lboost_system -lpthread -ldl -lstdc++ -ldl
+LDLIBS += -L $(ERL_INTERFACE_LIB_DIR) -lerl_interface -lei $(C_SRC_DIR)/libupscaledb.a -lz -lsnappy -lboost_thread -lboost_system -lpthread -ldl -lstdc++ -ldl
 LDFLAGS += -shared
 
 # Verbosity.
