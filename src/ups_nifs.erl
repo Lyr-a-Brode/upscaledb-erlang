@@ -54,7 +54,7 @@
      uqi_result_close/1
     ]).
 
--define(MISSING_NIF, {error, missing_nif}).
+-define(MISSING_NIF, missing_nif).
 -define(NIF_API_VERSION, 1).
 
 
@@ -70,101 +70,101 @@ init() ->
   erlang:load_nif(SoName, ?NIF_API_VERSION).
 
 strerror(_Status) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 env_create(_Filename, _Flags, _Mode, _Parameters) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 env_open(_Filename, _Flags, _Parameters) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 env_create_db(_Env, _Dbname, _Flags, _Parameters) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 env_open_db(_Env, _Dbname, _Flags, _Parameters) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 env_rename_db(_Env, _Oldname, _Newname) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 env_erase_db(_Env, _Dbname) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 db_insert(_Db, _Txn, _Key, _Value, _Flags) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 db_erase(_Db, _Txn, _Key) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 db_find(_Db, _Txn, _Key) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 db_find_flags(_Db, _Txn, _Key, _Flags) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 db_close(_Db) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 txn_begin(_Env, _Flags) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 txn_commit(_Txn) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 txn_abort(_Txn) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 env_close(_Env) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_create(_Env, _Txn) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_clone(_Cursor) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_move(_Cursor, _Flags) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_overwrite(_Cursor, _Record) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_find(_Cursor, _Key) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_insert(_Cursor, _Key, _Record, _Flags) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_erase(_Cursor) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_get_duplicate_count(_Cursor) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_get_record_size(_Cursor) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 cursor_close(_Cursor) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 uqi_select_range(_Env, _Query, _Cursor1, _Cursor2) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 uqi_result_get_row_count(_Result) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 uqi_result_get_key_type(_Result) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 uqi_result_get_record_type(_Result) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 uqi_result_get_key(_Result, _Row) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 uqi_result_get_record(_Result, _Row) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
 uqi_result_close(_Result) ->
-  throw(?MISSING_NIF).
+  erlang:nif_error(?MISSING_NIF).
 
